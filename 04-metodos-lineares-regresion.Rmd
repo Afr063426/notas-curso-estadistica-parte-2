@@ -32,7 +32,7 @@ En este caso obtener una estructura óptima o precisa de la función $\hat f$ no
 \begin{align*}
 \mathbb{E}\left[(\hat{Y}-Y\right)^2] 
 &=  \mathbb{E}\left[\left(  f(X_{1},\ldots,X_{p}) + \varepsilon - \hat{f}(X_{1},\ldots,X_{p}) \right)^{2}  \right] \\
-&= \underbrace{\left( f(X_{1},\ldots,X_{p})- \hat{f}(X_{1},\ldots,X_{p})  \right) ^{2} }_{\text{Reducible}}
+&= \underbrace{\mathbb{E}\left( f(X_{1},\ldots,X_{p})- \hat{f}(X_{1},\ldots,X_{p})  \right) ^{2} }_{\text{Reducible}}
 +\underbrace{\mathrm{Var}\left(\varepsilon\right)}_{\text{irreducible}}.
 \end{align*}
 asumiendo que $f$ y $X$ son conocidas y determinísticas.
@@ -131,9 +131,9 @@ Y_{n}
 \quad 
 \boldsymbol{X} = 
 \begin{pmatrix}
-1 & X_{1,1} & \cdots & X_{p,1} \\
+1 & X_{1,1} & \cdots & X_{1,p} \\
 \vdots & \vdots & \cdots & \vdots\\
-1 & X_{1,n}& \cdots & X_{p,n}
+1 & X_{n,1}& \cdots & X_{n,p}
 \end{pmatrix}_{n\times (p+1)}
 \\
 \boldsymbol{\varepsilon} = 
